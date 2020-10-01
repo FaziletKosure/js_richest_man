@@ -6,15 +6,18 @@ const sortBtn = document.getElementById('sort');
 const calculateWealthBtn = document.getElementById('calculate-wealth');
 
 let data=[];
-getRandomUser();
-getRandomUser();
-getRandomUser();
-getRandomUser();
+for(let i=0;i<4;i++){
+    getRandomUser()
+}
+// getRandomUser();
+// getRandomUser();
+// getRandomUser();
+// getRandomUser();
 //fetch random user and add money
 async function getRandomUser() {
      const res=await fetch('https://randomuser.me/api');
      const data= await res.json();
-     // console.log(data);
+     console.log(data);
     const user=data.results[0];
     // console.log(user);
     const newUser={
